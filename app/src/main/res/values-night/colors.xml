@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brandGreen">#009545</color>
+    <color name="textPrimary">#FFFFFF</color>
+    <color name="textSecondary">#B1B1B1</color>
+    <color name="backgroundPrimary">#121212</color> <color name="separatorLine">#4A4A4A</color>
+    <color name="searchBarBackground">#333333</color>
+    <color name="buttonSecondaryBackground">#333333</color>
+</resources>

@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@color/backgroundPrimary"
+    tools:context=".MainActivity">
+
+    <!--
+    ===================================================
+    BARRA SUPERIOR (HEADER)
+    ===================================================
+    -->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/button_background_gray"
+        android:gravity="center"
+        android:text="..."
+        android:textAlignment="center"
+        android:textColor="@color/textPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="43dp"
+        android:layout_height="45dp"
+        android:background="@drawable/button_background_green"
+        android:tint="@color/staticWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button2"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/button_background_gray"
+        app:layout_constraintBottom_toBottomOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/button2"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        app:tint="@color/textSecondary" />
+
+    <!--
+    ===================================================
+    TÍTULO E BUSCA
+    ===================================================
+    -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="94dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:text="Chats"
+        android:textColor="@color/textPrimary"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" android:layout_marginTop="10dp"
+        android:background="@drawable/search_bar_background" android:padding="8dp" android:text="🔎 Ask Meta AI or Search"
+        android:textColor="@color/textSecondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <!--
+    ===================================================
+    LINHA DOS ARQUIVADOS
+    ===================================================
+    -->
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:text="5"
+        android:textColor="@color/textSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+        app:layout_constraintEnd_toEndOf="@+id/textView2" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/transparent" app:tint="@color/textSecondary" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@android:drawable/stat_notify_chat" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Archived"
+        android:textColor="@color/textPrimary"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+        app:layout_constraintStart_toEndOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="@+id/imageButton3" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/separatorLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+
+    <!--
+    ===================================================
+    LISTA DE CONVERSAS (CHAT LIST)
+    ===================================================
+    -->
+
+    <!-- User 1: Bill Gates -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView"
+        android:layout_width="62dp"
+        android:layout_height="62dp"  android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:shapeAppearanceOverlay="@style/CircularImageView" tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Bill Gates"
+        android:textColor="@color/textPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="238dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="5dp"
+        android:text="Cara, me ajuda, atualiza ai pro windows 11 logo"
+        android:textColor="@color/textSecondary"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09:41"
+        android:textColor="@color/brandGreen"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView_unread_bill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/notification_badge_background" android:text="11"
+        android:textColor="@color/staticWhite" android:textStyle="bold"
+        android:textSize="12sp"
+
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/separatorLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <!-- User 2: Linus Tolwards -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView2"
+        android:layout_width="62dp"
+        android:layout_height="62dp"  android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        app:shapeAppearanceOverlay="@style/CircularImageView" tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView5_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Linus Tolwards"
+        android:textColor="@color/textPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView6_2"
+        android:layout_width="238dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="5dp"
+        android:text="Esse teu f# letter face-bonito... mas cadê o commit? Não vi push nenhum."
+        android:textColor="@color/textSecondary"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/textView5_2"
+        app:layout_constraintTop_toBottomOf="@+id/textView5_2" />
+
+    <TextView
+        android:id="@+id/textView7_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="09:11"
+        android:textColor="@color/textSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView5_2" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/separatorLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <!-- User 3: Elozinho -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView3"
+        android:layout_width="62dp"
+        android:layout_height="62dp"  android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        app:shapeAppearanceOverlay="@style/CircularImageView" tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView5_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Elozinho"
+        android:textColor="@color/textPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+    <TextView
+        android:id="@+id/textView6_3"
+        android:layout_width="238dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="5dp"
+        android:text="Se esse app rodar offline em Marte, nem me chama pra testar"
+        android:textColor="@color/textSecondary"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/textView5_3"
+        app:layout_constraintTop_toBottomOf="@+id/textView5_3" />
+
+    <TextView
+        android:id="@+id/textView7_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08:58"
+        android:textColor="@color/textSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView5_3" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/separatorLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <!-- User 4: Mãe -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView4"
+        android:layout_width="62dp"
+        android:layout_height="62dp"  android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4"
+        app:shapeAppearanceOverlay="@style/CircularImageView" tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView5_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Mãe"
+        android:textColor="@color/textPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+    <TextView
+        android:id="@+id/textView6_4"
+        android:layout_width="238dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="5dp"
+        android:text="Já te falei para você parar de andar com essas amizades esquisitas"
+        android:textColor="@color/textSecondary"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/textView5_4"
+        app:layout_constraintTop_toBottomOf="@+id/textView5_4" />
+
+    <TextView
+        android:id="@+id/textView7_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08:30"
+        android:textColor="@color/textSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView5_4" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/separatorLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    <!-- User 5: M. Zuck -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView5"
+        android:layout_width="62dp"
+        android:layout_height="62dp"  android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view5"
+        app:shapeAppearanceOverlay="@style/CircularImageView" tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView5_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="M. Zuck"
+        android:textColor="@color/textPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/textView6_5"
+        android:layout_width="238dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="5dp"
+        android:text="Mano, ce não vai atualizar pro windows 11 pra ajudar aquele teu... [etc]"
+        android:textColor="@color/textSecondary"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="@+id/textView5_5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5_5" />
+
+    <TextView
+        android:id="@+id/textView7_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08:30"
+        android:textColor="@color/textSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5_5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView5_5" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/separatorLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <!--
+    ===================================================
+    BARRA DE NAVEGAÇÃO INFERIOR (BOTTOM NAV)
+    ===================================================
+    -->
+
+    <!-- Item 1: Updates -->
+    <ImageView
+        android:id="@+id/nav_icon_updates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_text_updates"
+        app:layout_constraintEnd_toStartOf="@+id/nav_icon_call"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_updates"
+        app:tint="@color/textSecondary" />
+
+    <TextView
+        android:id="@+id/nav_text_updates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Updates"
+        android:textColor="@color/textSecondary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/nav_icon_updates"
+        app:layout_constraintStart_toStartOf="@+id/nav_icon_updates" />
+
+    <!-- Item 2: Call -->
+    <ImageView
+        android:id="@+id/nav_icon_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/nav_icon_updates"
+        app:layout_constraintEnd_toStartOf="@+id/nav_icon_community"
+        app:layout_constraintStart_toEndOf="@+id/nav_icon_updates"
+        app:srcCompat="@drawable/ic_call"
+        app:tint="@color/textSecondary" />
+
+    <TextView
+        android:id="@+id/nav_text_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call"
+        android:textColor="@color/textSecondary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nav_text_updates"
+        app:layout_constraintEnd_toEndOf="@+id/nav_icon_call"
+        app:layout_constraintStart_toStartOf="@+id/nav_icon_call" />
+
+    <!-- Item 3: Community -->
+    <ImageView
+        android:id="@+id/nav_icon_community"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/nav_icon_updates"
+        app:layout_constraintEnd_toStartOf="@+id/nav_icon_chats"
+        app:layout_constraintStart_toEndOf="@+id/nav_icon_call"
+        app:srcCompat="@drawable/ic_community"
+        app:tint="@color/textSecondary" />
+
+    <TextView
+        android:id="@+id/nav_text_community"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Community"
+        android:textColor="@color/textSecondary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nav_text_updates"
+        app:layout_constraintEnd_toEndOf="@+id/nav_icon_community"
+        app:layout_constraintStart_toStartOf="@+id/nav_icon_community" />
+
+    <!-- Item 4: Chats -->
+    <ImageView
+        android:id="@+id/nav_icon_chats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/nav_icon_updates"
+        app:layout_constraintEnd_toStartOf="@+id/nav_icon_settings"
+        app:layout_constraintStart_toEndOf="@+id/nav_icon_community"
+        app:srcCompat="@drawable/ic_chats_filled"
+        app:tint="@color/textSecondary" />
+
+    <TextView
+        android:id="@+id/nav_text_chats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chats"
+        android:textColor="@color/textSecondary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nav_text_updates"
+        app:layout_constraintEnd_toEndOf="@+id/nav_icon_chats"
+        app:layout_constraintStart_toStartOf="@+id/nav_icon_chats" />
+
+    <!-- Item 5: Settings -->
+    <ImageView
+        android:id="@+id/nav_icon_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/nav_icon_updates"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nav_icon_chats"
+        app:srcCompat="@drawable/ic_settings"
+        app:tint="@color/textSecondary" />
+
+    <TextView
+        android:id="@+id/nav_text_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textColor="@color/textSecondary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nav_text_updates"
+        app:layout_constraintEnd_toEndOf="@+id/nav_icon_settings"
+        app:layout_constraintStart_toStartOf="@+id/nav_icon_settings" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
